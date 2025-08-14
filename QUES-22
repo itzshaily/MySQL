@@ -1,9 +1,11 @@
 QUESTION
 
-Show first name, last name, and gender of patients whose gender is 'M'
+Show the total amount of male patients and the total amount of female patients in the patients table.
+Display the two results in the same row.
 
 ...
 
-SELECT first_name , last_name , gender
-FROM patients
-WHERE gender = 'M';
+
+SELECT
+   (SELECT COUNT(*) FROM patients WHERE gender ='M') AS male_count , 
+   (SELECT COUNT(*) FROM patients WHERE gender = 'F') AS female_count
