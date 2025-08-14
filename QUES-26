@@ -1,0 +1,14 @@
+QUESTION
+
+Show first name, last name and role of every person that is either patient or doctor.
+The roles are either "Patient" or "Doctor"
+
+...
+
+SELECT first_name , last_name , 'patient' AS role
+FROM patients
+
+UNION ALL
+
+SELECT first_name , last_name , 'doctor' AS role
+FROM doctors
